@@ -31,18 +31,20 @@
 
   </head>
 
-  <body>
-    <% if notice.present? %>
-      <div class="text-success">
-        <%= notice %>
-      </div>
-    <% end %>
-    <% if alert.present? %>
-      <div class="text-danger">
-        <%= alert %>
-      </div>
-    <% end %>
-    
-    <%= yield %>
+  <body class="pico">
+    <div class="container-two-thirds">
+      <% if notice.present? %>
+        <div class="text-success">
+          <%= notice %>
+        </div>
+      <% end %>
+      <% if alert.present? %>
+        <div class="text-danger">
+          <%= alert %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </div>
   </body>
 </html>
